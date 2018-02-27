@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+function validateForm() {
+    var y = document.forms["myForm 1"]["fadress"].value;
+    if (y == "") {
+        alert("address must be filled out");
+        return false;
+    }
+}
+function validateForm() {
+    var z = document.forms["myForm 2"]["fid"].value;
+    if (z == "") {
+        alert("address must be filled out");
+        return false;
+    }
+    function myFunction() {
+    var txt = "";
+    if (document.getElementById("id1").validity.rangeOverflow) {
+        txt = "Value too large";
+    } else {
+        txt = "Input OK";
+    } 
+    document.getElementById("demo").innerHTML = txt;
+}
+ function validateForm() {
+    var a = document.forms["myForm 3"]["fid"].value;
+    if (z == "") {
+        alert("address must be filled out");
+        return false;
+    }   
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+
+</form>
+<form adress="myForm 1" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Adress: <input type="text" name="fadress">
+
+</form>
+<form id="myForm 2" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+ID: <input type="text" name="fid"><br>
+Age: <input id="id1" type="number" max="100">
+<button onclick="myFunction()">OK</button>
+</form>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Phone No: <input type="text" name="fphone no"><br>
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
